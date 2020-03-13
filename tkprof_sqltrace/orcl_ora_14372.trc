@@ -1,0 +1,57 @@
+Trace file C:\ORACLE\diag\rdbms\orcl\orcl\trace\orcl_ora_14372.trc
+Oracle Database 18c Enterprise Edition Release 18.0.0.0.0 - Production
+Version 18.3.0.0.0
+Build label:    RDBMS_18.3.0.0.0DBRU_WINDOWS.X64_180627.2
+Windows NT Version V6.2  
+ORACLE_HOME =  C:\Oracle\OracleInstall
+Node name           : EDU-NTB10
+CPU                 : 8 - type 8664, 4 Physical Cores
+Process Affinity    : 0x0x0000000000000000
+Memory (Avail/Total): Ph:816M/7967M, Ph+PgF:2061M/17183M 
+Instance name: orcl
+Redo thread mounted by this instance: 1
+Oracle process number: 60
+Windows thread id: 14372, image: ORACLE.EXE (SHAD)
+
+
+*** 2020-03-13T15:55:05.923000+03:00
+*** SESSION ID:(502.15803) 2020-03-13T15:55:05.923000+03:00
+*** CLIENT ID:() 2020-03-13T15:55:05.923000+03:00
+*** SERVICE NAME:(SYS$USERS) 2020-03-13T15:55:05.923000+03:00
+*** MODULE NAME:(SQL Developer) 2020-03-13T15:55:05.923000+03:00
+*** ACTION NAME:() 2020-03-13T15:55:05.923000+03:00
+*** CLIENT DRIVER:(jdbcthin : 18.3.0.0.0) 2020-03-13T15:55:05.923000+03:00
+ 
+
+*** TRACE FILE RECREATED AFTER BEING REMOVED ***
+
+PARSE #1934662828408:c=0,e=25,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=1,plh=0,tim=142376436221
+EXEC #1934662828408:c=0,e=235,p=0,cr=0,cu=0,mis=0,r=1,dep=0,og=1,plh=0,tim=142376448684
+CLOSE #1934662828408:c=0,e=14,dep=0,type=3,tim=142376449492
+CLOSE #1933899139408:c=0,e=2,dep=0,type=1,tim=142376449529
+
+*** 2020-03-13T15:55:10.281513+03:00
+=====================
+PARSING IN CURSOR #1934635305728 len=121 dep=0 uid=103 oct=3 lid=103 tim=142380806534 hv=2528078353 ad='7ff858254b48' sqlid='gdxxzkqbayuhj'
+select state_id,count(severety) high_level from accidents where severety = '4' group by state_id order by high_level desc
+END OF STMT
+PARSE #1934635305728:c=0,e=205,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=1,plh=2910951595,tim=142380806532
+EXEC #1934635305728:c=0,e=165,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=1,plh=2910951595,tim=142380806960
+FETCH #1934635305728:c=0,e=1661,p=0,cr=142,cu=0,mis=0,r=49,dep=0,og=1,plh=2910951595,tim=142380808806
+STAT #1934635305728 id=1 cnt=49 pid=0 pos=1 obj=0 op='SORT ORDER BY (cr=142 pr=0 pw=0 str=1 time=1723 us cost=3301 size=26 card=1)'
+STAT #1934635305728 id=2 cnt=49 pid=1 pos=1 obj=0 op='HASH GROUP BY (cr=142 pr=0 pw=0 str=1 time=1663 us cost=3301 size=26 card=1)'
+STAT #1934635305728 id=3 cnt=1099 pid=2 pos=1 obj=74968 op='TABLE ACCESS FULL ACCIDENTS (cr=142 pr=0 pw=0 str=1 time=3549 us cost=3299 size=26 card=1)'
+
+*** 2020-03-13T15:55:12.096964+03:00
+CLOSE #1934657587144:c=0,e=8,dep=0,type=0,tim=142382622382
+PARSE #1934662828408:c=0,e=26,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=1,plh=0,tim=142382622503
+EXEC #1934662828408:c=0,e=248,p=0,cr=0,cu=0,mis=0,r=1,dep=0,og=1,plh=0,tim=142382622783
+
+*** 2020-03-13T15:55:13.144092+03:00
+CLOSE #1934662828408:c=0,e=39,dep=0,type=3,tim=142383668718
+=====================
+PARSING IN CURSOR #1934657587144 len=33 dep=0 uid=103 oct=42 lid=103 tim=142383709166 hv=525901419 ad='0' sqlid='aam2chsgpj7mb'
+alter session set sql_trace=false
+END OF STMT
+PARSE #1934657587144:c=0,e=17,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=0,plh=0,tim=142383709166
+EXEC #1934657587144:c=0,e=78,p=0,cr=0,cu=0,mis=0,r=0,dep=0,og=0,plh=0,tim=142383709394

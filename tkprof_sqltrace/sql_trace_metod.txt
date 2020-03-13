@@ -1,0 +1,9 @@
+GRANT ALTER SESSION TO test_user;--Добавление прав для пользователя test_user 
+
+alter session set timed_statistics=true;-- Включение отслеживания времени
+ 
+alter session set sql_trace=true;-- Включение записи
+------------------------------------------------
+-- выполняем запросы, которые хотим проверить --
+------------------------------------------------
+alter session set sql_trace=false;-- Выключение записи
